@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.26)  26 SEP 2012 13:20
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.26)  6 OCT 2012 00:09
 entering extended mode
 **cstools.tex
-(C:\Users\ionaic\Dropbox\Projects\cstools\cstools.tex
+(C:\Users\ionaic\Documents\GitHub\rcos-cstools\cstools.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -31,7 +31,7 @@ File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:\Users\ionaic\Dropbox\Projects\cstools\cstools.aux)
+(C:\Users\ionaic\Documents\GitHub\rcos-cstools\cstools.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
@@ -55,40 +55,88 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
 ]
-(C:\Users\ionaic\Dropbox\Projects\cstools\cstools.toc
+(C:\Users\ionaic\Documents\GitHub\rcos-cstools\cstools.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 1.
+(Font)              <12> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 1.
+(Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 1.
-)
+(Font)              <6> on input line 2.
+ [3])
 \tf@toc=\write3
- [3]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 45.
-
-Underfull \vbox (badness 8056) has occurred while \output is active []
-
  [4]
-[5] [6] (C:\Users\ionaic\Dropbox\Projects\cstools\cstools.aux) ) 
+Chapter 1.
+[5
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 27.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
+ [6] [7]
+[8
+
+]
+Chapter 2.
+[9] [10] [11] [12
+
+]
+Chapter 3.
+[13] [14
+
+]
+Chapter 4.
+[15] [16
+
+]
+Chapter 5.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+[18]
+Chapter 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <24.88> on input line 132.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <20.74> on input line 132.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 132.
+[19
+
+] [20]
+Chapter 7.
+[21
+
+] [22
+
+]
+Chapter 8.
+[23] (C:\Users\ionaic\Documents\GitHub\rcos-cstools\cstools.aux) ) 
 Here is how much of TeX's memory you used:
- 267 strings out of 493921
- 3228 string characters out of 3144873
- 54031 words of memory out of 3000000
- 3632 multiletter control sequences out of 15000+200000
- 10381 words of font info for 36 fonts, out of 3000000 for 9000
+ 301 strings out of 493921
+ 3791 string characters out of 3144873
+ 53031 words of memory out of 3000000
+ 3659 multiletter control sequences out of 15000+200000
+ 13095 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 23i,6n,19p,744b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb>
-Output written on cstools.pdf (6 pages, 74002 bytes).
+ 23i,7n,19p,919b,255s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsl8.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on cstools.pdf (23 pages, 141342 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

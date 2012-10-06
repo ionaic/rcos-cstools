@@ -9,45 +9,172 @@
 	\end{titlepage}
 	\tableofcontents
 	
-	\section{Setting up your System}
+	\chapter{Setting up your System}
 		Your development environment is a personal choice.  Some factors to consider include target platform, your familiarity with different software and environments, and the tools available to you in each environment.  We're proponents of Linux development, but there are situations where a different system may be ideal.
-		\subsection{Linux}
-			\subsubsection{Choosing a Distro}
+		\section{Linux}
+			\subsection{Choosing a Distro}
 				There are numerous different distributions, and it really (again) comes down to preference and what you want from your system.  Debian and Debian based distributions (e.g. Ubuntu and Linux Mint) are very beginner friendly and come pre-packaged with most of the tools you'll need for some of those basic operations you take for granted (displaying GUIs, adjusting volume and brightness, and connecting to the internet for instance).  They are somewhat less flexible as a result, or require more work to configure if you want a different significantly different setup than one of the pre-packaged ones.  Debian based distributions are excellent, however, and generally you don't need much beyond the pre-packaged configuration.
 				
 				If you're feeling adventurous or just want to try something different, there are numerous other distributions, such as Arch Linux, which is a bit less beginner-friendly and more difficult to configure.  
-		\subsection{Windows}
+		\section{Windows}
+			Setting up Windows should be a simple matter of either:\begin{itemize}
+				\item[A)] Buying a computer with Windows on it, or...
+				\item[B)] Buying a license for Windows, popping the disc in (or whatever other installation media you are using) and following the directions given
+			\end{itemize}			
 			
-		\subsection{Mac}
-			Coding on a Mac can be much the same as coding on a Linux system.  Both are (since Mac OS X) Unix based, and as such, most of the tools available 
+			%TODO add section reference to IDEs
+			From here, you can choose what you want to develop with.  If you want to use Microsoft Visual Studio, simply purchase a license (or get one through school, work etc.) and install.  Other IDEs (discussed later) are also available for C/C++ development as well as most other languages.  Some C/C++ IDEs include: \begin{itemize}
+				\item Eclipse
+				\item %TODO ide list
+			\end{itemize}
 			
-	\section{Basic Terminal Usage}
-		\subsection{Linux/Mac}
-		\subsection{Windows}
+			If you don't want a full IDE, there are also numerous editors, compilers and debugging tools available as individual programs.
+			\subsection{Editors}
+				Choosing an editor is truly a matter of personal preference, depending on the features you're looking for.  Some, like Vim or Emacs are very feature rich and extensible, with the tradeoff being a high learning curve.  Others, such as using Notepad, are very simple, but can be difficult because they lack useful features like syntax highlighting.  In general, you want something with (at the very least) syntax highlighting and often an option for soft tabs (replacing tabs with a number of spaces, usually 4).  C++ doesn't need soft tabs per se, but it's useful for preserving your code formatting across systems and programs.  Soft tabs becomes more necessary in situations where whitespace (spaces, tabs, newlines) become meaningful, such as in Python or Haskell.  Some will also include extra features, such as built in debugging, compiling or running programs, and editing extras such as macros.
+				\begin{itemize}
+					\item Notepad++
+					\item SciTE
+					\item Vim
+					\item Emacs
+					\item Code::Blocks
+					\item Notepad2
+				\end{itemize}
+			\subsection{Compilers and Interpreters}
+				You will need a suitable compiler or interpreter for whatever language you are developing in.  Notable compilers for C++ are GCC (g++ is the C++ compiler) and MSVCC, which comes with Microsoft Visual Studio.
+				
+				GCC can be used by installing MinGW, Cygwin, or another tool which either mimics or 
+		\section{Mac}
+			Coding on a Mac can be much the same as coding on a Linux system.  Both are (since Mac OS X) Unix based, and as such, most of the tools available.  In general, you can set up your system the same way a Linux user would, though some additional tools and software may be available.  %TODO get help from someone who uses a mac...
+			
+	\chapter{Basic Terminal Usage}
+		Alright then, wow that was lots of words.  Instead, have lists of commands you'll need.
+		\section{Linux/Mac}
+			When using the terminal, help text and man pages are available for most tools, commands and software, as well as extensive information on the internet.
+			
+			Manual pages can be accessed by running \verb+man <command>+, so, for example, to find help on the command \verb+grep+, you would run \verb+man grep+.  This also works for built in C++ and C functions, e.g. \verb+man printf+.
+			
+			Command line tools usually include help text as well, accessed either through the \verb+--help+ flag (e.g. \verb+ls --help+) or from the \verb+-h+ flag (e.g. \verb+sudo -h+).
+			\subsection{Moving Around/Browsing your files}
+				\begin{itemize}
+					\item \verb+ls+: List the files in a directory.  Common flags are \verb+-a+ to list hidden files and \verb+-l+ to print extra information.
+					
+						\verb+ls -a+
+						
+						\verb+ls -al+
+					\item \verb+cd+: Move to a directory.  Note \verb+..+ is the directory above and \verb+.+ is the current directory.
+					\item \verb+mv+ Move file or folder to a different directory. (Will automatically recurse for folders!)
+					\item \verb+cp+ Copy a file or folder to a different directory. (Will not automatically recurse, must specify with \verb+cp -r+.)
+				\end{itemize}
+			\subsection{Permissions}
+				\begin{itemize}
+					\item \verb+sudo+
+					\item \verb+su+
+					\item \verb+chmod+
+					\item \verb+chown+
+					\item \verb+gksudo+ GTK frontend for sudo, creates a window which prompts for the password instead of through command line.  Useful for executing from the run dialog (Alt+F2) or things like dmenu.
+				\end{itemize}
+			\subsection{Other useful commands}
+				\begin{itemize}
+					\item \verb+grep+ Regular expressions
+					\item \verb+cat+
+					\item \verb+less+
+					\item \verb+more+
+					\item \verb+alias+
+					\item \verb+man+
+					\item \verb+apt-get+
+					\item \verb+aptitude+
+					\item \verb+dpkg+
+					\item \verb+screen+ Terminal multiplexing.  Lets you have multiple terminals in one, as well as split screens, move between them and detach to save sessions for later.  \emph{Screen will also allow you to connect to a serial device.}
+					\item \verb+tmux+ A different terminal multiplexor with some additional features for multiplexing, but will not connect to serial devices.
+					\item \verb+pacman+
+				\end{itemize}
+			
+			\subsection{Configuring}
+				If you use bash as your shell (if you are on Debian/Ubuntu/Linux Mint bash is the default), you can configure it using your \verb+.bashrc+ file, found in your home directory (\verb+/home/yourusername/.bashrc+, equivalent to \verb+~/.bashrc+).
+				
+				Any valid bash shell commands can be written and they will execute.  For example, \verb+alias cp='cp -v'+ will cause cp to always run with the verbose (\verb+-v+) flag.
+					
+		\section{Windows}
+			\subsection{Moving Around/Browsing Files}
+				\begin{itemize}
+					\item 
+				\end{itemize}
+	\chapter{Text Editors and IDEs}
+		\section{Command Line Editors}
+		\section{GUI editors/IDEs}
+		
+	\chapter{Compiler Usage}
+		\section{Command Line Compilers}
+		\section{GUI based compilers}
+		\section{Linking Libraries}
+		\section{Cross-Compiling}
+		
+	\chapter{Debugging}
+		\section{Types of Errors}
+			\subsection{Compile-time}
+				\begin{itemize}
+					\item 
+				\end{itemize}
+			\subsection{Runtime}
+				\begin{itemize}
+					\item Segmentation Fault (Seg Fault): Your program tried to access memory that it couldn't, or otherwise did something with memory it shouldn't have.  This is usually caused by something wrong with pointers, your other logic, or a stack overflow, where your program ran infinitely or used too much memory (infinite/large sized arrays/vectors etc.).
+					\item 
+				\end{itemize}
+		\section{Debugging Tools}
+			\subsection{GDB}
+			\subsection{Visual Studio Debugger}
+		\section{Debugging Memory}
+			\subsection{Valgrind}
+			\subsection{Dr. Memory}
+		\section{Debugging Performance}
+		\section{Understanding Compiler Errors}
+			
+	\chapter{\LaTeX}
+		There comes a time in most science, math and engineering students' lives when they need to write pages of equations. \LaTeX is made for typesetting documents, including equations, tables, pictures and text, and is perfectly suited for pages of proofs, lab reports, and general documents.  It may look intimidating at first, because you're writing markup to create your document, and it seems a bit like code, but it makes formatting much simpler and creates neater, more professional documents.
+		
+		The basic structure of a \LaTeX document looks like this:
+\begin{verbatim}
+% this is a comment, it won't be in your document
+% include documentclass at the top of every LaTeX document
+% 12pt is an argument telling it to make the general font 12pt
+% article is just a basic type of document for most purposes
+\documentclass[12pt]{article}
+
+% specify a title
+\title{My TAs Love Me Because They Can Read My Work}
+
+% specify an author
+\author{Chuck Finley}
+
+% specify the date, \today just inserts the current date
+\date{\today}
+% \date{October 5, 2012} %specifies a specific date instead
+
+% start the body of the document
+\begin{document}
+		% tell LaTeX to actually make a title, it will change the size
+		% and center it for you
+		\maketitle
+		% these are still comments
+		You can write whatever you want here, just like you would
+		in Word, LibreOffice or OpenOffice.  One major difference 
+		is that LaTeX removes extraneous (more than 1) spaces    such
+		        as   these.
 	
-	\section{Text Editors and IDEs}
-		\subsection{Command Line Editors}
-		\subsection{GUI editors/IDEs}
-		
-	\section{Compiler Usage}
-		\subsection{Command Line Compilers}
-		\subsection{GUI based compilers}
-		\subsection{Linking Libraries}
-		\subsection{Cross-Compiling}
-		
-	\section{Debugging}
-		\subsection{Types of Errors}
-		\subsection{Debugging Tools}
-		\subsection{Debugging Memory}
-		\subsection{Debugging Performance}
-		\subsection{Understanding Compiler Errors}
-		
-	\section{\LaTeX}
-		There comes a time in most science, math and engineering students' lives when they need to write pages of equations.	
+		A single empty line will start a new paragraph and indent
+		it for you.  The first paragraph is not indented by
+		default, don't worry about it.  It bothered me at first,
+		but it's really going to be ok.
 	
-	\section{Build Systems}
-		\subsection{Makefiles}
-		\subsection{CMake}
+		LaTeX (\LaTeX) commands start with a backslash (\). 
+		\emph{This text is emphasized, similar to italics.}
+		\textbf{This text is bold.}  You have to escape
+		backslashes, such as \\.  The same works to type \%.		
+\end{document}
+\end{verbatim}
+	\chapter{Build Systems}
+		\section{Makefiles}
+		\section{CMake}
 		
-	\section{Source Control}
+	\chapter{Source Control}
 \end{document}
