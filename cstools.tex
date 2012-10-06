@@ -1,5 +1,7 @@
 \documentclass[12pt]{book}
 
+\usepackage{listings}
+
 \title{Introduction to Tools for Computer Science and Software Development}
 \author{Ian Ooi, Amelia Peterson}
 
@@ -10,12 +12,48 @@
 	\tableofcontents
 	
 	\chapter{Setting up your System}
-		Your development environment is a personal choice.  Some factors to consider include target platform, your familiarity with different software and environments, and the tools available to you in each environment.  We're proponents of Linux development, but there are situations where a different system may be ideal.
+		Picking a platform is largely a personal choice, but some factors to consider include:
+		\begin{itemize}
+			\item Target platform (What is this going to be run on?  What is your TA/Professor using?  If for production, is the user on Windows, Mac, Linux...?)
+			\item How comfortable are you with each?  (Have you ever used Linux?  Have you used Windows?  Have you developed software on the platform?)
+			\item What tools do you know about for the platform? (We're hoping to help a bit here, but do you have any preferred tools you use already?  Do you have help available from a friend, TA or Professor with a specific software?  Is the tool going to make life a lot easier?)
+			\item What is going to have the best tools available? (If you only need to make Windows GUIs, developing on Windows is probably a good idea.)
+		\end{itemize}
+		%Your development environment is a personal choice.  Some factors to consider include target platform, your familiarity with different software and environments, and the tools available to you in each environment.  We're proponents of Linux development, but there are situations where a different system may be ideal.
 		\section{Linux}
+			Benefits of using Linux:
+			\begin{itemize}
+				\item Software and tools generally available for free
+				\item Flexible, configurable systems
+				\item Numerous tools and programs available
+				\item Numerous tools geared toward software development
+				\item Community help and support
+				\item Extensive, \emph{built-in} documentation
+				\item You can fix your own problems (Windows/Mac you generally need to just reinstall or, for Macs, take it to a professional)
+				\item Unix itself can be your IDE
+			\end{itemize}
 			\subsection{Choosing a Distro}
-				There are numerous different distributions, and it really (again) comes down to preference and what you want from your system.  Debian and Debian based distributions (e.g. Ubuntu and Linux Mint) are very beginner friendly and come pre-packaged with most of the tools you'll need for some of those basic operations you take for granted (displaying GUIs, adjusting volume and brightness, and connecting to the internet for instance).  They are somewhat less flexible as a result, or require more work to configure if you want a different significantly different setup than one of the pre-packaged ones.  Debian based distributions are excellent, however, and generally you don't need much beyond the pre-packaged configuration.
+				Popular distributions include:
+				\begin{itemize}
+					% more or less?
+					\item Debian
+					\item Ubuntu (based off Debian)
+					\item Linux Mint (based off Debian)
+					\item Arch Linux
+					\item Fedora
+					\item OpenSUSE
+					\item FreeBSD
+					\item Slackware
+					\item Gentoo
+				\end{itemize}
+				Picking is, again, a matter of preference, but there are tradeoffs.  {\bf If you are new to Linux, it is probably best to use Linux Mint, Ubuntu or Debian.}  All three come prepackaged with most everything you need to have your system set up with a GUI, internet access and media (sound, CDs, DVDs etc.) access.  When you are more experienced however, remember that these can come with features you distinctly don't want, or want to replace (such as window managers).
 				
-				If you're feeling adventurous or just want to try something different, there are numerous other distributions, such as Arch Linux, which is a bit less beginner-friendly and more difficult to configure.  
+				Arch Linux has some of the best documentation around, but is distinctly less beginner friendly (you will not start off with simple internet access, a GUI, media, and a number of other amenities).  Gentoo and Slackware are on the far end of the spectrum and are really only for people who know what they're doing or are distinctly masochistic.
+				%There are numerous different distributions, and it really (again) comes down to preference and what you want from your system.  Debian and Debian based distributions (e.g. Ubuntu and Linux Mint) are very beginner friendly and come pre-packaged with most of the tools you'll need for some of those basic operations you take for granted (displaying GUIs, adjusting volume and brightness, and connecting to the internet for instance).  They are somewhat less flexible as a result, or require more work to configure if you want a different significantly different setup than one of the pre-packaged ones.  Debian based distributions are excellent, however, and generally you don't need much beyond the pre-packaged configuration.
+				
+				%If you're feeling adventurous or just want to try something different, there are numerous other distributions, such as Arch Linux, which is a bit less beginner-friendly and more difficult to configure.  
+			\subsection{Text Editors}
+				
 		\section{Windows}
 			Setting up Windows should be a simple matter of either:\begin{itemize}
 				\item[A)] Buying a computer with Windows on it, or...
@@ -133,45 +171,7 @@
 		There comes a time in most science, math and engineering students' lives when they need to write pages of equations. \LaTeX is made for typesetting documents, including equations, tables, pictures and text, and is perfectly suited for pages of proofs, lab reports, and general documents.  It may look intimidating at first, because you're writing markup to create your document, and it seems a bit like code, but it makes formatting much simpler and creates neater, more professional documents.
 		
 		The basic structure of a \LaTeX document looks like this:
-\begin{verbatim}
-% this is a comment, it won't be in your document
-% include documentclass at the top of every LaTeX document
-% 12pt is an argument telling it to make the general font 12pt
-% article is just a basic type of document for most purposes
-\documentclass[12pt]{article}
-
-% specify a title
-\title{My TAs Love Me Because They Can Read My Work}
-
-% specify an author
-\author{Chuck Finley}
-
-% specify the date, \today just inserts the current date
-\date{\today}
-% \date{October 5, 2012} %specifies a specific date instead
-
-% start the body of the document
-\begin{document}
-		% tell LaTeX to actually make a title, it will change the size
-		% and center it for you
-		\maketitle
-		% these are still comments
-		You can write whatever you want here, just like you would
-		in Word, LibreOffice or OpenOffice.  One major difference 
-		is that LaTeX removes extraneous (more than 1) spaces    such
-		        as   these.
-	
-		A single empty line will start a new paragraph and indent
-		it for you.  The first paragraph is not indented by
-		default, don't worry about it.  It bothered me at first,
-		but it's really going to be ok.
-	
-		LaTeX (\LaTeX) commands start with a backslash (\). 
-		\emph{This text is emphasized, similar to italics.}
-		\textbf{This text is bold.}  You have to escape
-		backslashes, such as \\.  The same works to type \%.		
-\end{document}
-\end{verbatim}
+		\lstinputlisting[language=TeX]{examples/latex/latexbasics.tex}
 	\chapter{Build Systems}
 		\section{Makefiles}
 		\section{CMake}

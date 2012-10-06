@@ -1,0 +1,38 @@
+% this is a comment, it won't be in your document
+% include documentclass at the top of every LaTeX document
+% 12pt is an argument telling it to make the general font 12pt
+% article is just a basic type of document for most purposes
+\documentclass[12pt]{article}
+
+% specify a title
+\title{My TAs Love Me Because They Can Read My Work}
+
+% specify an author
+\author{Chuck Finley}
+
+% specify the date, \today just inserts the current date
+\date{\today}
+% \date{October 5, 2012} %specifies a specific date instead
+
+% start the body of the document
+\begin{document}
+    % tell LaTeX to actually make a title, it will
+    % change the size and center it for you
+    \maketitle
+    % these are still comments
+    You can write whatever you want here, just like
+    you would in Word, LibreOffice or OpenOffice.  
+    One major difference is that LaTeX removes 
+    extraneous (more than 1) spaces    such   as   
+    these.
+	
+    A single empty line will start a new paragraph 
+    and indent it for you. The first paragraph is not 
+    indented by default, don't worry about it. It bothered 
+    me at first too, but it's really going to be ok.
+	
+    LaTeX (\LaTeX) commands start with a backslash (\). 
+    \emph{This text is emphasized, similar to italics.} 
+    \textbf{This text is bold.}  You have to escape 
+    backslashes, such as \\.  The same works to type \%.
+\end{document}
